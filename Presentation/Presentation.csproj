@@ -112,6 +112,7 @@
     <Content Include="Scripts\AngularPrj\Service\Customer.Service.js" />
     <Content Include="Scripts\AngularPrj\Service\LoanCalculator.Service.js" />
     <Content Include="Scripts\AngularPrj\Service\AspNetUserService.js" />
+    <Content Include="Scripts\AngularPrj\Service\LoanTypeService.js" />
     <Content Include="Scripts\AngularPrj\Service\LocalStorage.Service.js" />
     <Content Include="Scripts\jasmine-samples\Player.js" />
     <Content Include="Scripts\jasmine-samples\PlayerSpec.js" />
@@ -166,7 +167,9 @@
     <Content Include="Scripts\react-with-addons.min.js" />
     <Content Include="Scripts\react.js" />
     <Content Include="Scripts\react.min.js" />
+    <Content Include="Scripts\ReactPrj\build\LoanType.js" />
     <Content Include="Scripts\ReactPrj\build\Sample.js" />
+    <Content Include="Scripts\ReactPrj\src\LoanType.js" />
     <Content Include="Scripts\ReactPrj\src\Sample.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -177,6 +180,7 @@
     <Content Include="Views\CustomerProfile.html" />
     <Content Include="Views\LoanCalculator.html" />
     <Content Include="Views\ContactUs.html" />
+    <Content Include="Views\LoanType.html" />
     <Content Include="Views\MyProfile.html" />
     <Content Include="Views\PrivacyPolicy.html" />
     <Content Include="Views\RegisterSuccessful.html" />

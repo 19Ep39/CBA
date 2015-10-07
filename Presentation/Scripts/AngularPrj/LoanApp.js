@@ -49,6 +49,10 @@ LoanApp.config(['$routeProvider', '$locationProvider', function ($routeProvider,
         templateUrl: 'Views/Customers.html',
         controller: ''
     });
+    $routeProvider.when('/LoanType', {
+        templateUrl: 'Views/LoanType.html',
+        controller: ''
+    });
     //$routeProvider.otherwise({ redirectTo: '/Index' });
     //$locationProvider.html5Mode(true);
 }]);
