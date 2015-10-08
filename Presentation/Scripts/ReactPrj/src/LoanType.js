@@ -1,15 +1,32 @@
-﻿var loantypeData = {};
-var rows = [];
-var injector = angular.injector(['ng', 'LoanApp']);
+﻿var injector = angular.injector(['ng', 'LoanApp']);
 var loantypeService = injector.get('LoanTypeService');
 var CustomRow = React.createClass({
     render: function() {
         return (
-            <tr className = "warning">
-                <td>{this.props.id}</td>
-                <td>{this.props.typeDesc}</td>
-            </tr>
-        );
+        <section>
+            <h4>Loan Types</h4>
+            <table className="table table-bordered table-hover">
+                <thead>
+                    <tr className="active">
+                        <th>ID #</th>
+                        <th>Loan Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        this.props.data.map(function(data){
+                            return(
+                            <tr className="warning">
+                                <td>{data.id}</td>
+                                <td>{data.typeDesc}</td>
+                            </tr>
+                        );              
+                        })
+                    }
+                </tbody>
+            </table>
+        </section>
+    );
     }
 });
 var LoanTypeApp = React.createClass({
@@ -18,31 +35,19 @@ var LoanTypeApp = React.createClass({
             data:[]        
         }
     },
-    componentDidMount: function() {       
+    componentDidMount: function() {      
         loantypeService.getLoanTypes().then(function (result) {
-            loantypeData = result;
-            this.setState(loantypeData)
+            this.setState({data: result.data
+            
+            });
         }.bind(this))
     },
-render: function() { 
-    this.state.data.map(function(data){
-        rows.push(<CustomRow id={data.id} typeDesc={data.typeDesc} />)
-});
-return (
-  <section>         
-<h4>Loan Types</h4>
-     <table className="table table-bordered table-hover">
-            <thead>
-                <tr className="active">
-                    <th>ID #</th>
-                    <th>Loan Description</th>
-                </tr>
-            </thead>
-            <tbody>{rows}</tbody>
-        </table>          
-
-</section>
-    );
+    render: function() { 
+        return(       
+        <CustomRow data={this.state.data} />
+    );    
 }
 });
-React.render(<LoanTypeApp />, document.getElementById('loanTypeContainer'));
+React.render(
+<LoanTypeApp  />
+, document.getElementById('loanTypeContainer'));
