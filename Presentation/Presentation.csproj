@@ -167,7 +167,6 @@
     <Content Include="Scripts\react-with-addons.min.js" />
     <Content Include="Scripts\react.js" />
     <Content Include="Scripts\react.min.js" />
-    <Content Include="Scripts\ReactPrj\build\LoanType.js" />
     <Content Include="Scripts\ReactPrj\build\Sample.js" />
     <Content Include="Scripts\ReactPrj\src\LoanType.js" />
     <Content Include="Scripts\ReactPrj\src\Sample.js" />
